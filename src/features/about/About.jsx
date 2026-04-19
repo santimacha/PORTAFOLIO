@@ -55,7 +55,7 @@ export default function About() {
   "stack": ["React", "Flutter",
             "Python", "postgreSQL"],
   "educacion": {
-    "titulo": "Tecnólogo Dev. Software",
+    "titulo": "Tecnologo Dev. Software",
     "actual": "Ingeniería en Sistemas",
     "semestre": 8
   },

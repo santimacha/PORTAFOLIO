@@ -92,7 +92,7 @@ export default function Contact() {
         <div className="contact__footer">
           <div className="footer-line"></div>
           <p className="footer-text">
-            Diseñado y construido por <strong>Santiago Machacón</strong> · {new Date().getFullYear()}
+            Diseñado y construido por <strong>Santiago Machacon</strong> · {new Date().getFullYear()}
           </p>
         </div>
       </div>
