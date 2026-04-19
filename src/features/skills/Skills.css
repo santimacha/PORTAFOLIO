@@ -1,0 +1,131 @@
+.skills {
+  background: var(--bg-2);
+}
+
+.skills__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.skills__subtitle {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+  letter-spacing: 0.05em;
+}
+
+/* Bars */
+.skills__bars {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skill-bar__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.skill-bar__name {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--text);
+}
+
+.skill-bar__level {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent-2);
+}
+
+.skill-bar__track {
+  height: 4px;
+  background: var(--surface-2);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.skill-bar__fill {
+  height: 100%;
+  width: var(--target-width);
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  border-radius: 99px;
+  animation: grow 1.2s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+@keyframes grow {
+  from { width: 0; }
+  to { width: var(--target-width); }
+}
+
+/* Soft skills */
+.skills__soft {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.soft-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  transition: var(--transition);
+}
+
+.soft-card:hover {
+  border-color: var(--accent);
+  color: var(--text);
+}
+
+.soft-card__icon {
+  font-size: 1.1rem;
+}
+
+/* Languages */
+.skills__languages {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.lang-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.lang-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.lang-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1.5px solid var(--accent);
+}
+
+.lang-dot--filled {
+  background: var(--accent);
+}
+
+@media (max-width: 780px) {
+  .skills__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}

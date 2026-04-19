@@ -1,0 +1,128 @@
+.about {
+  background: var(--bg-2);
+}
+
+.about__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.about__text {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.about__text p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.85;
+}
+
+.about__text strong {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.about__info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 8px;
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.info-label {
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.info-value {
+  font-size: 0.85rem;
+  color: var(--text);
+}
+
+.info-value--link {
+  color: var(--accent-2);
+  transition: var(--transition);
+}
+
+.info-value--link:hover {
+  text-decoration: underline;
+}
+
+/* Code card */
+.about__card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  position: sticky;
+  top: 100px;
+}
+
+.about__card-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 20px;
+  background: var(--surface-2);
+  border-bottom: 1px solid var(--border);
+}
+
+.card-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.card-dot--red { background: #ff5f57; }
+.card-dot--yellow { background: #febc2e; }
+.card-dot--green { background: #28c840; }
+
+.card-filename {
+  margin-left: 8px;
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  letter-spacing: 0.05em;
+}
+
+.about__card-body {
+  padding: 28px;
+}
+
+.about__card-body pre {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  line-height: 1.75;
+  color: var(--text-muted);
+  white-space: pre-wrap;
+}
+
+.about__card-body pre {
+  color: var(--text-muted);
+}
+
+@media (max-width: 860px) {
+  .about__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about__card {
+    position: static;
+  }
+}

@@ -1,0 +1,115 @@
+.projects {
+  background: var(--bg);
+}
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.project-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition);
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.project-card:hover {
+  border-color: var(--project-color);
+  transform: translateY(-4px);
+}
+
+.project-card__glow {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--project-color) 15%, transparent) 0%, transparent 70%);
+  pointer-events: none;
+  transition: var(--transition);
+}
+
+.project-card:hover .project-card__glow {
+  transform: scale(1.5);
+}
+
+.project-card__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-card__emoji {
+  font-size: 2rem;
+}
+
+.project-card__category {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--project-color);
+  background: color-mix(in srgb, var(--project-color) 10%, transparent);
+  border: 1px solid color-mix(in srgb, var(--project-color) 25%, transparent);
+  padding: 3px 12px;
+  border-radius: 99px;
+  letter-spacing: 0.1em;
+}
+
+.project-card__name {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.project-card__desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  flex: 1;
+}
+
+.project-card__tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tech-pill {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  background: var(--surface-2);
+  padding: 3px 10px;
+  border-radius: 4px;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.project-card__footer {
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+  margin-top: 4px;
+}
+
+.project-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--project-color);
+  transition: var(--transition);
+}
+
+.project-card__link:hover {
+  gap: 10px;
+}
